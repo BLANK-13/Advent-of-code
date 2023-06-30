@@ -3,7 +3,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class AOC_2_part1 {
+public class AOC_2_part2 {
     public static void main(String[] args) throws IOException {
         Path fileName = Paths.get( "C:\\Users\\Saud\\IdeaProjects\\practice\\src\\RPS.txt");
         String content = Files.readString(fileName);
@@ -16,36 +16,36 @@ public class AOC_2_part1 {
             switch (s.charAt(2)) {
                 case 'X' -> {
                     if (s.charAt(0) == 'A') {
-                        totalScore += 3 + xBonus; // draw
+                        totalScore += zBonus;
                     } else if (s.charAt(0) == 'B') {
-                        totalScore += xBonus; // lost
+                        totalScore += xBonus;
                     } else if (s.charAt(0) == 'C') {
-                        totalScore += 6 + xBonus; // win
+                        totalScore += yBonus;
 
                     }
                 }
                 case 'Y' -> {
                     if (s.charAt(0) == 'A') {
-                        totalScore += 6 + yBonus; // win
+                        totalScore += 3 + xBonus;
                     } else if (s.charAt(0) == 'B') {
-                        totalScore += 3 + yBonus; // draw
-                    } else if (s.charAt(0) == 'C') {
-                        totalScore += yBonus; // lost
-
-                    }
-                }
-                case 'Z' -> {
-                    if (s.charAt(0) == 'A') {
-                        totalScore += zBonus; // lost
-                    } else if (s.charAt(0) == 'B') {
-                        totalScore += 6 + zBonus; // lost
+                        totalScore += 3 + yBonus;
                     } else if (s.charAt(0) == 'C') {
                         totalScore += 3 + zBonus;
 
                     }
                 }
+                case 'Z' -> {
+                    if (s.charAt(0) == 'A') {
+                        totalScore += 6 + yBonus;
+                    } else if (s.charAt(0) == 'B') {
+                        totalScore += 6 + zBonus;
+                    } else if (s.charAt(0) == 'C') {
+                        totalScore += 6 + xBonus;
+
+                    }
+                }
             }
         }
-            System.out.println(totalScore);
+        System.out.println(totalScore);
     }
 }
