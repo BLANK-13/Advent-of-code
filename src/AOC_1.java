@@ -11,7 +11,7 @@ import static java.util.Comparator.comparing;
 public class AOC_1 {
     public static void main(String[] args) throws Exception {
 
-        Path fileName = Paths.get( "C:\\Users\\Saud\\IdeaProjects\\practice\\src\\input.txt");
+        Path fileName = Paths.get( "C:\\Users\\Saud\\IdeaProjects\\practice\\src\\elves.txt");
         String content = Files.readString(fileName);
 
         String[] splitted = content.split(System.lineSeparator());
