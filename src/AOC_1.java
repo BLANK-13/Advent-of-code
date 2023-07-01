@@ -4,10 +4,6 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Stream;
 
-import static java.util.Comparator.comparing;
-
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class AOC_1 {
     public static void main(String[] args) throws Exception {
 
@@ -15,8 +11,7 @@ public class AOC_1 {
         String content = Files.readString(fileName);
 
         String[] splitted = content.split(System.lineSeparator());
-        HashMap<Integer,Integer> elves = new HashMap<Integer, Integer>();
-        
+        HashMap<Integer,Integer> elves = new HashMap<>();
         int calories = 0;
         int elf_number = 1;
         
