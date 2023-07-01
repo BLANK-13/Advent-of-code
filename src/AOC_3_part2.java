@@ -4,6 +4,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Comparator;
 import java.util.Arrays;
+
 public class AOC_3_part2 {
     public static void main(String[] args) throws IOException {
         Path fileName = Paths.get("C:\\Users\\Saud\\IdeaProjects\\practice\\src\\rucksacks.txt");
