@@ -13,7 +13,9 @@ public class AOC_2_part2 {
         int xBonus = 1, yBonus = 2, zBonus = 3;
 
         for (String s : splitted){
+
             switch (s.charAt(2)) {
+
                 case 'X' -> {
                     if (s.charAt(0) == 'A') {
                         totalScore += zBonus;
