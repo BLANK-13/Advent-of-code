@@ -16,23 +16,11 @@ public class AOC_5_part1 {
         String[] instructions = splitted[1].split("\n");
 
         ArrayList<Stack<String>> crateStacks = initStacks(crates[0]);
+
         stacksParsing(crateStacks, crates);
-
-        for (String inst : instructions) {
-
-            String[] instNums = inst.split(" ");
-            int amount = Integer.parseInt(instNums[1]);
-            int from = Integer.parseInt(instNums[3]);
-            int to = Integer.parseInt(instNums[5]);
-
-            for (int i = 0; i < amount; i++) {
-                crateStacks.get(to - 1).push(crateStacks.get(from - 1).pop());
-            }
-        }
-
+        stacksInstructions(crateStacks, instructions);
         printPeeks(crateStacks);
     }
-
     @NotNull
     public static ArrayList<Stack<String>> initStacks(String firstRow) {
         int count = (firstRow.length() + 1) / 4;
@@ -62,6 +50,20 @@ public class AOC_5_part1 {
         }
         for (Stack<String> s : crateStacks) {
             Collections.reverse(s);
+        }
+    }
+
+    public static void stacksInstructions(ArrayList<Stack<String>> crateStacks, String[] instructions){
+        for (String inst : instructions) {
+
+            String[] instNums = inst.split(" ");
+            int amount = Integer.parseInt(instNums[1]);
+            int from = Integer.parseInt(instNums[3]);
+            int to = Integer.parseInt(instNums[5]);
+
+            for (int i = 0; i < amount; i++) {
+                crateStacks.get(to - 1).push(crateStacks.get(from - 1).pop());
+            }
         }
     }
 
