@@ -21,6 +21,7 @@ public class AOC_5_part1 {
         stacksInstructions(crateStacks, instructions);
         printPeeks(crateStacks);
     }
+
     @NotNull
     public static ArrayList<Stack<String>> initStacks(String firstRow) {
         int count = (firstRow.length() + 1) / 4;
