@@ -1,4 +1,3 @@
-import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
@@ -66,8 +65,6 @@ public class AOC_5_part1 {
         }
     }
 
-    @NotNull
-    @Contract(pure = true)
     public static String separateCrates(String rowOfCrates) {
         rowOfCrates = rowOfCrates.replace(' ', ',');
 
@@ -80,4 +77,3 @@ public class AOC_5_part1 {
         }
     }
 }
-
