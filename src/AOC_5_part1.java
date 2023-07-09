@@ -26,6 +26,7 @@ public class AOC_5_part1 {
     public static ArrayList<Stack<String>> initStacks(String firstRow) {
         int count = (firstRow.length() + 1) / 4;
         ArrayList<Stack<String>> stacks = new ArrayList<>();
+
         for (int i = 0; i < count; i++) {
             stacks.add(new Stack<>());
         }
