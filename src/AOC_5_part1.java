@@ -54,7 +54,7 @@ public class AOC_5_part1 {
         }
     }
 
-    public static void stacksInstructions(ArrayList<Stack<String>> crateStacks, String[] instructions){
+    public static void stacksInstructions(ArrayList<Stack<String>> crateStacks, String[] instructions) {
         for (String inst : instructions) {
 
             String[] instNums = inst.split(" ");
